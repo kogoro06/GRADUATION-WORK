@@ -1,0 +1,13 @@
+<p class="mb-4">ドロップダウンから曲を選んで、<br>歌詞を表示してください。</p>
+<%= form_with url: diagnosis_start_path, method: :get, local: true, id: "songForm" do %>
+  <div class="form-group mb-4 w-full max-w-xs">
+    <label for="songSelect" class="block text-gray-700 text-sm font-bold mb-2">曲を選択:</label>
+    <select id="songSelect" class="form-control block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+      <option value="">-- 曲を選んでください --</option>
+      <option value="Twinkle, Twinkle, Little Star">きらきら星</option>
+      <option value="Happy Birthday">ハッピーバースデー</option>
+      <option value="Row, Row, Row Your Boat">こげよマイケル</option>
+      <option value="Jingle Bells">ジングルベル</option>
+    </select>
+  </div>
+<% end %>

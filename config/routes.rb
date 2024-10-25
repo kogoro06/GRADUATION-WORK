@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   get "start_diagnosis", to: "diagnosis#start"
   post 'diagnosis/upload_audio', to: 'diagnosis#upload_audio', as: 'upload_audio'
+  get 'diagnosis/result', to: 'diagnosis#result', as: 'diagnosis_result'
 
   # Defines the root path route ("/")
   # root "posts#index"

@@ -11,9 +11,28 @@ ja:
     models:
       user: "ユーザ"
   devise:
+    sessions:
+      new:
+        sign_in: "ログイン"
+        log_in: "ログイン"
+    registrations:
+      new:
+        sign_up: "新規登録"
+    passwords:
+      new:
+        forgot_password: "パスワード再発行"
+        forgot_your_password: "パスワードを忘れましたか?"
+        send_me_reset_password_instructions: "パスワードの再設定方法を送信する"
     confirmations:
       new:
+        confirmation_instructions: "確認メールを受け取っていませんか？"
         resend_confirmation_instructions: "アカウント確認メール再送"
+    unlocks:
+      new:
+        unlock_instructions: "ロック解除指示を受け取っていませんか？"
+        resend_unlock_instructions: "アカウントの凍結解除方法を再送する"
+    omniauth_callbacks:
+      sign_in_with: "%{provider}でログイン"
     mailer:
       confirmation_instructions:
         action: "アカウント確認"
@@ -22,7 +41,7 @@ ja:
       reset_password_instructions:
         action: "パスワード変更"
         greeting: "こんにちは、%{recipient}さん!"
-        instruction: "誰かがパスワードの再設定を希望しました。次のリンクでパスワードの再設定が出来ます。"
+        instruction: "次のリンクでパスワードの再設定が出来ます。"
         instruction_2: "あなたが希望したのではないのなら、このメールは無視してください。"
         instruction_3: "上のリンクにアクセスして新しいパスワードを設定するまで、パスワードは変更されません。"
       unlock_instructions:
@@ -30,15 +49,6 @@ ja:
         greeting: "こんにちは、%{recipient}さん!"
         instruction: "アカウントのロックを解除するには下のリンクをクリックしてください。"
         message: "ログイン失敗が繰り返されたため、アカウントはロックされています。"
-    passwords:
-      edit:
-        change_my_password: "パスワードを変更する"
-        change_your_password: "パスワードを変更"
-        confirm_new_password: "確認用新しいパスワード"
-        new_password: "新しいパスワード"
-      new:
-        forgot_your_password: "パスワードを忘れましたか?"
-        send_me_reset_password_instructions: "パスワードの再設定方法を送信する"
     registrations:
       edit:
         are_you_sure: "本当に良いですか?"
@@ -49,11 +59,6 @@ ja:
         unhappy: "気に入りません"
         update: "更新"
         we_need_your_current_password_to_confirm_your_changes: "変更を反映するには現在のパスワードを入力してください"
-      new:
-        sign_up: "アカウント登録"
-    sessions:
-      new:
-        sign_in: "ログイン"
     shared:
       links:
         back: "戻る"
@@ -61,12 +66,7 @@ ja:
         didn_t_receive_unlock_instructions: "アカウントの凍結解除方法のメールを受け取っていませんか?"
         forgot_your_password: "パスワードを忘れましたか?"
         sign_in: "ログイン"
-        sign_in_with_provider: "%{provider}でログイン"
         sign_up: "アカウント登録"
-        Forgot your password: "パスワードを忘れた方はこちら"
-    unlocks:
-      new:
-        resend_unlock_instructions: "アカウントの凍結解除方法を再送する"
     errors:
       models:
         user:
